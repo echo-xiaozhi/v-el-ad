@@ -39,24 +39,24 @@ module.exports = {
     before: require('./mock/mock-server.js'),
     // 开发代理服务器
     proxy: {
-      // [process.env.VUE_APP_BASE_API]: {
-      //   // 目标服务器地址
-      //   target: 'https://mock.mengxuegu.com/mock/6063d952f2e38f3a2f6ba42f/xzec',
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     // 匹配 /dev-api
-      //     [ '^' + process.env.VUE_APP_BASE_API]: ''
-      //   }
-      // }
       [process.env.VUE_APP_BASE_API]: {
         // 目标服务器地址
-        target: 'http://shopsys.lo',
+        target: 'https://mock.mengxuegu.com/mock/6063d952f2e38f3a2f6ba42f/xzec',
         changeOrigin: true,
         pathRewrite: {
           // 匹配 /dev-api
           [ '^' + process.env.VUE_APP_BASE_API]: ''
         }
       }
+      // [process.env.VUE_APP_BASE_API]: {
+      //   // 目标服务器地址
+      //   target: 'http://shopsys.lo',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     // 匹配 /dev-api
+      //     [ '^' + process.env.VUE_APP_BASE_API]: ''
+      //   }
+      // }
     }
   },
   configureWebpack: {
